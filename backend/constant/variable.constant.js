@@ -1,0 +1,1 @@
+export const ENCRYPTION_SALT_ROUNDS = 10;

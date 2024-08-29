@@ -1,0 +1,38 @@
+version: "3"
+
+services:
+  video-dashboard-rest-app:
+    image: video-dashboard-rest-api-image
+    stdin_open: true
+    command: node index.js
+    env_file:
+      - ".production.env"
+    ports:
+      - "40000:443"
+    networks:
+      - video-dashboard
+    depends_on:
+      - db-server-video-dashboard
+    restart: "unless-stopped"
+
+  db-server-video-dashboard:
+    image: mongo:4.4
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: video_dashboard_admin
+      MONGO_INITDB_ROOT_PASSWORD: 2b0YlZxL79D
+      MONGO_INITDB_DATABASE: admin
+    ports:
+      - "40001:27017"
+    networks:
+      - video-dashboard
+    volumes:
+      - db-storage-video-dashboard:/data/db
+      - ./docker-entrypoint-initdb.d/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    restart: "unless-stopped"
+
+networks:
+  video-dashboard:
+    driver: bridge
+volumes:
+  db-storage-video-dashboard:
+    driver: local
