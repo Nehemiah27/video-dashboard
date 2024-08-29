@@ -130,10 +130,10 @@ const Listings = () => {
           New Video
         </Link>
         <Link
-          onClick={() => handleNavigate("/listings")}
+          onClick={() => handleNavigate("/my-videos")}
           sx={{ cursor: "pointer" }}
         >
-          Listings
+          My Videos
         </Link>
       </Box>
       <Box
