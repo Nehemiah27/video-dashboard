@@ -22,6 +22,6 @@ app.use("/api/auth", authRoutes);
 app.use(errorHandler);
 app.use(globalException);
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`App is running on Port ${PORT}`);
 });
