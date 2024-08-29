@@ -6,7 +6,6 @@ import envCaptured from "./envValidation.js";
 
 const transporter = nodemailer.createTransport({
     host: envCaptured.mailModule.mailHost,
-    port: 587,
     secure: false,
     auth: {
       user: envCaptured.mailModule.mailAuthUser,
