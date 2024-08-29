@@ -60,5 +60,5 @@ const envCaptured = {
     mailAuthPass: envVars.MAIL_PASSWORD,
   },
 };
-
+console.log(envCaptured, "envCaptured");
 export default envCaptured;
