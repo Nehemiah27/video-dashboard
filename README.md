@@ -1,6 +1,6 @@
 <h1 align="center" id="title">Video Dashboarding</h1>
 
-<p id="description">Video Dashboarding is a full-stack MERN application that allows users to create an account with the Dashboard and receive a password in the email registered to follow-up with the Dashboarding process. Here the registered user can upload videos and view vidoe. The application demonstrates proficiency in frontend development with ReactJS and backend development with Node.js, Express.js and database management with MongoDB. Additionally the app incorporates advanced MongoDB Aggregations with optimized quering.</p>
+<p id="description">Video Dashboarding is a full-stack MERN application that allows users to create an account with the Dashboard and receive a password in the email registered to follow-up with the Dashboarding process. Here the registered user can upload videos and view uploaded videos. The application demonstrates proficiency in frontend development with ReactJS and backend development with Node.js, Express.js and database management with MongoDB. Additionally the app incorporates advanced MongoDB Aggregations with optimized quering.</p>
 
 <h2>🚀 Demo</h2>
 
