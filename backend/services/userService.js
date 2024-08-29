@@ -36,6 +36,7 @@ export const createNewUser = async (userInfo, email) => {
     email,
     password: await hashPassword(randomPassword),
     userID: uuid(),
+    userBio: "You can edit your Bio here...",
   });
   if (mailStatus) return userResponses.USER_CREATE_SUCCESS;
   else return userResponses.USER_CREATE_SUCCESS_WITHOUT_MAIL;
